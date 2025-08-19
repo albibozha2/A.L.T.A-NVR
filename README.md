@@ -142,4 +142,4 @@ Ky projekt është nën licencën MIT. Shih skedarin [LICENSE](LICENSE) për det
 
 ---
 
-**Krijuar me ❤️ nga Albi Bozha dhe Florian Tani**
+ Albi Bozha dhe Florian Tani**
