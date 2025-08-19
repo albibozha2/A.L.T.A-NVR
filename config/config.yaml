@@ -1,0 +1,44 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+  debug: false
+
+database:
+  url: "sqlite:///./data/nvr.db"
+
+storage:
+  path: "./recordings"
+  max_size_gb: 100
+  retention_days: 30
+
+cameras:
+  default_settings:
+    fps: 15
+    resolution: [1920, 1080]
+    codec: "h264"
+    bitrate: 2000
+    
+detection:
+  enabled: true
+  model: "yolov8n.pt"
+  confidence_threshold: 0.5
+  classes: ["person", "car", "truck", "bicycle", "motorcycle", "dog", "cat"]
+  
+motion:
+  enabled: true
+  sensitivity: 0.02
+  min_area: 500
+  
+recording:
+  continuous: false
+  event_based: true
+  pre_event_seconds: 5
+  post_event_seconds: 10
+  
+webhooks:
+  enabled: false
+  urls: []
+
+logging:
+  level: "INFO"
+  file: "./logs/nvr.log"
